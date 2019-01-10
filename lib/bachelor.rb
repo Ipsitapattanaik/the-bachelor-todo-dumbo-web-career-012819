@@ -9,10 +9,18 @@ end
 
 def get_contestant_name(data, occupation)
   # code here
+  data.each do |season, acter|
+    acter.each do |index|
+      if index["occupation"] == occupation
+        return index["name"]
+      end
+    end
+  end
 end
 
 def count_contestants_by_hometown(data, hometown)
   # code here
+  
 end
 
 def get_occupation(data, hometown)
